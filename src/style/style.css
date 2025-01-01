@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  background-color: #2a3335;
+  color: #fff;
+  font-family: "Roboto", serif;
+}
+
+.blank {
+  height: 300vh;
+}
+
+.header {
+  position: sticky;
+  width: 100%;
+  bottom: 10%;
+}
+
+.header .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.header .image img {
+  filter: grayscale(100%);
+}
+
+/* Navbar */
+.nav-warp {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid #fff;
+  padding: 1rem 4rem;
+}
+
+.nav-warp ul {
+  display: inline-flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-warp ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  /* border: 1px solid red; */
+  font-weight: 500;
+}
+
+.nav-warp ul li a::after {
+  content: "";
+  display: block;
+  width: 15%;
+  margin: 0.2rem 0rem;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+/* .nav-warp ul li a::before {
+  content: "";
+  display: block;
+  width: 20%;
+  margin: 0.2rem 0rem;
+  height: 2px;
+  background: #fff;
+  float: right;
+  transition: width 0.3s;
+} */
+
+.nav-warp ul li a:hover::after {
+  width: 100%;
+}
+
+/* .nav-warp ul li a:hover::before {
+  width: 100%;
+} */
+
+/* Mobile Display Navbar*/
+@media (max-width: 768px) {
+  .nav-warp h1 {
+    margin: 0rem 2rem;
+  }
+
+  .nav-warp {
+    padding: 1rem 0rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-warp ul {
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    padding: 0rem 0rem;
+    top: 100%;
+    gap: 0rem;
+  }
+
+  .nav-warp ul li {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+  }
+
+  .nav-warp ul li a {
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0rem;
+    color: #fff;
+  }
+
+  .nav-warp ul li a::after {
+    display: none;
+  }
+
+  .nav-warp ul li a:hover {
+    border-bottom: 0px;
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* Humburger */
+  .humburger {
+    display: flex;
+    border: 1px solid #fff;
+    width: 30px;
+    margin-right: 2rem;
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .humburger .line {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+  }
+
+  .nav-logo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Main Content */
+.content {
+  height: 1200vh;
+}
